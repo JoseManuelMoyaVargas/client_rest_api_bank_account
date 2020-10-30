@@ -1,0 +1,37 @@
+<h2 class="mt-2 mb-3">Accounts</h2>
+<table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Currency</th>
+                <th>Balance</th>
+                <th>Treasury</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        
+        <tr ng-repeat = "account in accounts">
+                <td>{{ account.id }}</td>
+                <td>{{ account.name}}</td>
+                <td>{{ account.currency }}</td>
+                <td>{{ account.balance }}</td>
+                <td>{{ account.treasury }}</td>
+                <!--<td><button class="btn btn-light" ng-click="edit(account.id)">Edit</button></td>-->
+                <td>
+                    <a  class="btn btn-light" href = "#!/edit/{{account.id}}">Edit</a>
+                </td>
+                
+
+                <td><button class="btn btn-danger" ng-click="delete(account.id)">Delete</button></td>
+        </tr>
+        
+
+    </table>
+    <div class="d-flex flex-row justify-content-between">
+        <a  class="btn btn-primary" href = "#!/addAccount">ADD ACCOUNT</a>
+        <a  class="btn btn-dark" href = "">NEW TRANSFER</a>
+    </div>
+    

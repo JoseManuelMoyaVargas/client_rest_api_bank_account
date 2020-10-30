@@ -1,0 +1,30 @@
+<div class="container ">
+<form class="form_add_account mt-2 mb-3" >
+    <h2 ng-show="!edition" class="">Add account</h2>
+    <h2 ng-show="edition" class="">Edit account</h2>
+    <label for="nameInput" class="mt-2">NAME</label>
+    <input id="nameInput" class="form-control"  type = "text" name = "name"  ng-model = "name" required >
+    
+    <label for="currencyInput" class="mt-2">CURRENCY</label>
+    <input id="currencyInput" class="form-control"  type = "text" name = "currency"  ng-model = "currency" required >
+
+    <label for="balanceInput" class="mt-2">BALANCE</label>
+    <input id="balanceInput" class="form-control"  type = "number" name = "balance"  ng-model = "balance">
+    
+
+    
+    <div class="form-check mt-2" ng-show="!edition">
+        <input id="treasuryCheckBox" class="form-check-input" type="checkbox" name = "treasury" ng-model="treasury" />
+        <label class="form-check-label" for="treasuryCheckBox">
+            Treasury
+        </label>
+    </div>
+
+    <div class="alert alert-danger mt-2" ng-show = "error">
+        <strong>Error!</strong> Currency has to be a valid code!
+    </div>
+
+    <button ng-show ="!edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="submit()">Submit</button>
+    <button ng-show ="edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="edit()">Edit</button>
+</form>
+</div>
