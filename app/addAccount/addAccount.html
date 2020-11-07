@@ -24,7 +24,7 @@
         <strong>Error!</strong> Currency has to be a valid code!
     </div>
 
-    <button ng-show ="!edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="submit()">Submit</button>
-    <button ng-show ="edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="edit()">Edit</button>
+    <button id="submit_new_account" ng-show ="!edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="submit()">Submit</button>
+    <button id="submit_edit_account" ng-show ="edition" class="btn btn-primary mt-3" ng-disabled="!name || !currency"ng-click="edit()">Edit</button>
 </form>
 </div>
